@@ -4,29 +4,29 @@ from operations import add, sub, mult, div
 app = Flask(__name__)
 
 @app.get("/add")
-def add():
+def adds():
     """Return the sum"""
     integer1 = request.args["a"]
     integer2 = request.args["b"]
-    return add(integer1,integer2)
+    return str(add(int(integer1),int(integer2)))
 
 @app.get("/sub")
-def sub():
+def subs():
     """Return the difference"""
     integer1 = request.args["a"]
     integer2 = request.args["b"]
-    return sub(integer1,integer2)
+    return str(sub(int(integer1),int(integer2)))
 
 @app.get("/mult")
-def mult():
+def mults():
     """Return the difference"""
     integer1 = request.args["a"]
     integer2 = request.args["b"]
-    return mult(integer1,integer2)
+    return str(mult(int(integer1),int(integer2)))
 
 @app.get("/div")
-def div():
+def divs():
     """Return the difference"""
     integer1 = request.args["a"]
     integer2 = request.args["b"]
-    return div(integer1,integer2)
+    return str(div(int(integer1),int(integer2)))
